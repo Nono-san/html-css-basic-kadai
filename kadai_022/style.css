@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background-color: rgb(244, 79, 79);
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: rgb(255, 255, 255);
+}
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+#parent p {
+  font-size: 20px;
+}
+
+.contents {
+  flex-basis: 25%;
+  text-align: center;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 20px 0;
+  border: solid 3px rgb(238, 204, 204);
+}
+
+.contents > h2 {
+  font-size: 25px;
+  border-bottom: dotted 3px rgb(236, 122, 122);
+}
+
+.contents h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+
+.contents p:nth-of-type(2)::first-letter {
+  color: rgb(97, 206, 249);
+  font-weight: bold;
+}
+
+.contents img {
+  width: 70%;
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(244, 79, 79);
+}
+
+footer a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+@media screen and (max-width: 768px) {
+  #parent {
+    flex-direction: column;
+  }
+
+  .contents h2 {
+    font-size: 30px;
+  }
+
+  .contents p {
+    font-size: 25px;
+  }
+}
